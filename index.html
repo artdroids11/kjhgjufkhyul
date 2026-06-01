@@ -3,285 +3,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Painel de Caminhos para o Agricultor Familiar sobre políticas de incentivo, apoio público e impacto social.">
-  <title>Raízes que Sustentam | Painel de Incentivo</title>
+  <meta name="description" content="Projeto Agrinho 2026 sobre educação, sustentabilidade e agro com diagnóstico interativo de ações para escola, casa, comunidade e propriedade rural.">
+  <title>Educação que Cultiva o Futuro</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
-  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
 
-  <header class="tool-header">
-    <nav class="tool-nav" aria-label="Navegação do painel">
-      <a class="quiet-name" href="#inicio">Raízes que Sustentam</a>
-      <div class="tool-seal" aria-label="Assinatura do projeto">Painel de Incentivo à Agricultura Familiar</div>
+  <header class="site-header" id="topo">
+    <div class="header-container">
+      <a class="brand" href="#inicio" aria-label="Educação que Cultiva o Futuro - início">
+        <span class="brand-mark" aria-hidden="true">EC</span>
+        <span>Educação que Cultiva o Futuro</span>
+      </a>
 
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
       </button>
 
-      <ul class="nav-links" id="menu-principal">
-        <li><a href="#inicio">Mapa</a></li>
-        <li><a href="#quem-produz">Quem produz</a></li>
-        <li><a href="#falhas">Obstáculos</a></li>
-        <li><a href="#painel">Painel</a></li>
-        <li><a href="#politicas">Políticas</a></li>
-        <li><a href="#decisoes">Decisões</a></li>
-      </ul>
-
-      <div class="access-tools" aria-label="Recursos de acessibilidade">
-        <button class="access-btn" id="contrast-toggle" type="button" aria-pressed="false">Alto contraste</button>
-        <button class="access-btn" id="reading-toggle" type="button" aria-pressed="false">Modo leitura</button>
-      </div>
-    </nav>
+      <nav class="site-nav" id="menu-principal" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#trilha">Trilha</a>
+        <a href="#laboratorio">Laboratório</a>
+        <a href="#acoes">Ações</a>
+        <a href="#projeto">Projeto</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
   </header>
 
   <main id="conteudo">
-    <section class="opening" id="inicio" aria-labelledby="opening-title">
-      <div class="opening-copy">
-        <p class="kicker">Jornada interativa de apoio público</p>
-        <h1 id="opening-title">O campo invisível que sustenta a cidade.</h1>
-        <p>Por trás de cada feira, merenda escolar e alimento na mesa, existe uma rede de famílias produtoras que precisa de apoio para continuar produzindo com dignidade.</p>
-        <div class="opening-actions">
-          <a class="action primary" href="#quem-produz">Começar a jornada</a>
-          <a class="action ghost" href="#painel">Abrir painel de apoio</a>
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="hero-copy">
+        <p class="eyebrow">Agrinho Programação 2026</p>
+        <h1 id="titulo-principal">Aprender a cuidar do campo é planejar a vida da cidade.</h1>
+        <p class="hero-subtitle">
+          Este projeto mostra como a escola pode transformar problemas reais do agro em investigação, tecnologia simples e atitudes sustentáveis.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#diagnostico">Fazer diagnóstico</a>
+          <a class="btn btn-secondary" href="#trilha">Ver trilha educativa</a>
         </div>
       </div>
 
-      <div class="map-board" aria-label="Mapa visual conectando campo, família produtora, feira, escola e cidade">
-        <img class="map-emblem" src="img/painel-caminhos.svg" alt="Ilustração autoral de caminhos conectando agricultura familiar, escola, feira e cidade.">
-        <div class="terrain city">
-          <span>cidade</span>
-          <i></i><i></i><i></i>
+      <article class="field-map" aria-label="Mapa visual de conexão entre escola, água, solo e comunidade">
+        <div class="map-ribbon map-ribbon-one" aria-hidden="true"></div>
+        <div class="map-ribbon map-ribbon-two" aria-hidden="true"></div>
+        <div class="map-station station-school">
+          <strong>Escola</strong>
+          <span>pergunta</span>
         </div>
-        <div class="terrain field">
-          <span>campo</span>
-          <i></i><i></i><i></i><i></i>
+        <div class="map-station station-soil">
+          <strong>Solo</strong>
+          <span>observa</span>
         </div>
-        <svg class="connection-lines" viewBox="0 0 680 440" aria-hidden="true">
-          <path d="M110 308 C230 210, 310 220, 430 128" />
-          <path d="M145 318 C250 340, 370 326, 530 286" />
-          <path d="M208 210 C312 164, 386 204, 492 198" />
-          <path d="M338 348 C350 264, 376 198, 446 142" />
-        </svg>
-        <div class="map-pin producer"><b>Família</b><span>decide, planta e vende</span></div>
-        <div class="map-pin fair"><b>Feira</b><span>renda local</span></div>
-        <div class="map-pin school"><b>Escola</b><span>alimentação e aprendizagem</span></div>
-        <div class="map-pin consumer"><b>Consumidor</b><span>escolha que fortalece</span></div>
-        <div class="stat-marker one"><strong>70%</strong><span>do sentido social está na conexão</span></div>
-        <div class="stat-marker two"><strong>+ apoio</strong><span>menos invisibilidade</span></div>
+        <div class="map-station station-water">
+          <strong>Água</strong>
+          <span>mede</span>
+        </div>
+        <div class="map-station station-community">
+          <strong>Comunidade</strong>
+          <span>aplica</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section intro-band" aria-labelledby="problema-titulo">
+      <div class="section-header">
+        <p class="section-label">Problema real</p>
+        <h2 id="problema-titulo">Produzir mais não basta: é preciso entender o impacto de cada escolha.</h2>
+      </div>
+      <div class="problem-layout">
+        <article>
+          <h3>O desafio</h3>
+          <p>
+            Muitas decisões do campo passam por água, solo, resíduos, energia e informação. Quando esses temas ficam longe da sala de aula, a comunidade perde a chance de agir antes que o problema cresça.
+          </p>
+        </article>
+        <ul class="signal-list" aria-label="Principais desafios">
+          <li>Uso de água sem acompanhamento.</li>
+          <li>Solo exposto à erosão e compactação.</li>
+          <li>Restos orgânicos tratados como lixo.</li>
+          <li>Pouca troca entre estudantes e produtores.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="producer-profile section-pad" id="quem-produz" aria-labelledby="producer-title">
-      <aside class="producer-file" aria-label="Ficha social do agricultor familiar">
-        <div class="file-top">
-          <span>Ficha do produtor</span>
-          <strong>AF-2026</strong>
-        </div>
-        <dl>
-          <div><dt>Trabalho</dt><dd>familiar e coletivo</dd></div>
-          <div><dt>Produção</dt><dd>alimentos variados</dd></div>
-          <div><dt>Local</dt><dd>pequenas propriedades e comunidades rurais</dd></div>
-          <div><dt>Desafio</dt><dd>produzir, vender e sobreviver com dignidade</dd></div>
-          <div><dt>Importância</dt><dd>abastecimento, renda e cultura local</dd></div>
-        </dl>
-      </aside>
-
-      <div class="profile-text">
-        <p class="kicker">Quem produz?</p>
-        <h2 id="producer-title">Quem é o agricultor familiar?</h2>
-        <p>A agricultura familiar não é apenas um modelo de produção. É uma forma de vida, trabalho e permanência no campo. Nela, a família participa diretamente das decisões, do cultivo, da venda e da gestão da propriedade.</p>
-        <p>Quando o apoio público funciona, essa família deixa de enfrentar tudo sozinha e passa a ter caminhos para produzir melhor, vender com justiça e permanecer no território.</p>
-      </div>
-    </section>
-
-    <section class="obstacle-map section-pad" id="falhas" aria-labelledby="obstacle-title">
-      <div class="section-intro">
-        <p class="kicker">Onde o sistema falha?</p>
-        <h2 id="obstacle-title">O problema não está só em plantar. Está em conseguir continuar.</h2>
-      </div>
-      <ol class="route">
-        <li><span>01</span><strong>Crédito difícil</strong><p>Sem capital, melhorias urgentes ficam paradas.</p></li>
-        <li><span>02</span><strong>Falta de assistência técnica</strong><p>Decisões sobre solo, cultivo e gestão viram tentativa e erro.</p></li>
-        <li><span>03</span><strong>Estradas ruins</strong><p>O alimento perde qualidade antes de chegar ao comprador.</p></li>
-        <li><span>04</span><strong>Atravessadores</strong><p>Parte do valor fica no caminho, longe de quem produziu.</p></li>
-        <li><span>05</span><strong>Baixo acesso à tecnologia</strong><p>Informação, previsão e controle chegam tarde ou nem chegam.</p></li>
-        <li><span>06</span><strong>Perdas por clima</strong><p>Seca, chuva e calor extremo tornam a renda instável.</p></li>
-        <li><span>07</span><strong>Pouca valorização local</strong><p>A cidade consome, mas nem sempre reconhece a origem.</p></li>
-        <li><span>08</span><strong>Dificuldade para vender</strong><p>Produzir bem não garante acesso a mercado justo.</p></li>
-      </ol>
-    </section>
-
-    <section class="support-panel section-pad" id="painel" aria-labelledby="panel-title">
-      <div class="panel-heading">
-        <div>
-          <p class="kicker">Função principal</p>
-          <h2 id="panel-title">Painel de Caminhos de Apoio</h2>
-          <p>Monte um caso real e veja quais políticas podem abrir caminho para a família produtora.</p>
-        </div>
-        <div class="panel-status" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <section class="section" id="diagnostico" aria-labelledby="diagnostico-titulo">
+      <div class="section-header">
+        <p class="section-label">Ferramenta principal</p>
+        <h2 id="diagnostico-titulo">Diagnóstico de ação sustentável</h2>
+        <p>Informe um cenário e receba uma orientação personalizada, sem recarregar a página.</p>
       </div>
 
-      <div class="case-builder">
-        <form class="case-form" id="case-form">
-          <label for="difficulty">A. Principal dificuldade</label>
-          <select id="difficulty" name="difficulty" required>
-            <option value="">Escolha uma dificuldade</option>
-            <option>Falta de dinheiro para investir</option>
-            <option>Dificuldade para vender</option>
-            <option>Falta de orientação técnica</option>
-            <option>Perdas por desperdício</option>
-            <option>Pouco acesso à tecnologia</option>
-            <option>Produção afetada pelo clima</option>
-            <option>Baixa valorização do produto local</option>
-          </select>
+      <div class="diagnostic-shell">
+        <form class="diagnostic-form" id="diagnostic-form">
+          <div class="form-row">
+            <label for="ambiente">Ambiente observado</label>
+            <select id="ambiente" name="ambiente">
+              <option value="escola">Escola</option>
+              <option value="casa">Casa</option>
+              <option value="comunidade">Comunidade</option>
+              <option value="rural">Propriedade rural</option>
+            </select>
+          </div>
 
-          <label for="production">B. Tipo de produção</label>
-          <select id="production" name="production" required>
-            <option value="">Escolha a produção</option>
-            <option>Horta familiar</option>
-            <option>Alimentos variados</option>
-            <option>Leite e derivados</option>
-            <option>Agroindústria familiar</option>
-            <option>Produção agroecológica</option>
-            <option>Venda em feira</option>
-          </select>
+          <div class="form-row">
+            <label for="desafio">Maior desafio</label>
+            <select id="desafio" name="desafio">
+              <option value="agua">Água</option>
+              <option value="solo">Solo</option>
+              <option value="residuos">Resíduos</option>
+              <option value="energia">Energia</option>
+            </select>
+          </div>
 
-          <label for="goal">C. Objetivo da família</label>
-          <select id="goal" name="goal" required>
-            <option value="">Escolha o objetivo</option>
-            <option>Aumentar renda</option>
-            <option>Reduzir perdas</option>
-            <option>Vender direto</option>
-            <option>Produzir de forma sustentável</option>
-            <option>Melhorar estrutura</option>
-            <option>Acessar novos mercados</option>
-          </select>
+          <div class="form-row">
+            <label for="participantes">Pessoas envolvidas</label>
+            <input id="participantes" name="participantes" type="number" min="1" max="300" value="25">
+          </div>
 
-          <button class="action primary full" type="submit">Gerar plano de apoio</button>
+          <button class="btn btn-primary" type="submit">Gerar plano</button>
         </form>
 
-        <div class="plan-output" id="plan-output" aria-live="polite">
-          <div class="waiting-plan">
-            <span>Plano aguardando dados</span>
-            <p>Selecione dificuldade, produção e objetivo para revelar uma trilha de apoio.</p>
+        <article class="diagnostic-result" id="diagnostic-result" aria-live="polite">
+          <p class="result-kicker">Resultado</p>
+          <h3>Escolha os dados para iniciar.</h3>
+          <p>O plano aparecerá aqui com prioridade, primeira ação e sugestão de registro.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="trilha" aria-labelledby="trilha-titulo">
+      <div class="section-header">
+        <p class="section-label">Trilha educativa</p>
+        <h2 id="trilha-titulo">Da pergunta ao cuidado: quatro etapas para aprender fazendo.</h2>
+      </div>
+      <div class="trail-grid">
+        <article>
+          <span>01</span>
+          <h3>Observar</h3>
+          <p>Registrar o que acontece no entorno: água parada, solo sem cobertura, descarte incorreto ou desperdício.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Investigar</h3>
+          <p>Comparar dados, entrevistar produtores e relacionar o problema ao conteúdo estudado.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Testar</h3>
+          <p>Criar uma prática pequena, como composteira, canteiro protegido, campanha de economia ou medição semanal.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Compartilhar</h3>
+          <p>Apresentar resultados para a comunidade e ajustar o plano com base no que funcionou.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="laboratorio" aria-labelledby="laboratorio-titulo">
+      <div class="section-header">
+        <p class="section-label">Laboratório da escola</p>
+        <h2 id="laboratorio-titulo">Experimentos simples também geram decisão inteligente.</h2>
+      </div>
+      <div class="lab-layout">
+        <article class="lab-panel">
+          <h3>Kit de investigação</h3>
+          <p>Um projeto escolar pode começar com materiais acessíveis: régua para acompanhar crescimento, garrafa para irrigação controlada, caderno de campo e planilha manual.</p>
+        </article>
+        <div class="tab-box">
+          <div class="tab-buttons" role="tablist" aria-label="Temas do laboratório">
+            <button class="tab-button active" type="button" id="tab-solo" role="tab" aria-selected="true" aria-controls="panel-solo" data-tab="solo">Solo</button>
+            <button class="tab-button" type="button" id="tab-agua" role="tab" aria-selected="false" aria-controls="panel-agua" data-tab="agua">Água</button>
+            <button class="tab-button" type="button" id="tab-dados" role="tab" aria-selected="false" aria-controls="panel-dados" data-tab="dados">Dados</button>
           </div>
+          <article class="tab-panel active" id="panel-solo" role="tabpanel" aria-labelledby="tab-solo">
+            <h3>Solo</h3>
+            <p>Comparar áreas com palhada e sem cobertura ajuda a enxergar retenção de umidade, temperatura e erosão.</p>
+          </article>
+          <article class="tab-panel" id="panel-agua" role="tabpanel" aria-labelledby="tab-agua" hidden>
+            <h3>Água</h3>
+            <p>Medir consumo em uma horta mostra quando a irrigação é necessária e quando vira desperdício.</p>
+          </article>
+          <article class="tab-panel" id="panel-dados" role="tabpanel" aria-labelledby="tab-dados" hidden>
+            <h3>Dados</h3>
+            <p>Anotar datas, clima e resultados transforma observação em argumento para melhorar a prática.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="policy-library section-pad" id="politicas" aria-labelledby="library-title">
-      <div class="section-intro">
-        <p class="kicker">Biblioteca de instrumentos</p>
-        <h2 id="library-title">Políticas que viram caminhos</h2>
+    <section class="section section-soft" id="acoes" aria-labelledby="acoes-titulo">
+      <div class="section-header">
+        <p class="section-label">Organização</p>
+        <h2 id="acoes-titulo">Banco de ações por prioridade</h2>
+        <p>Use os botões para filtrar ideias práticas que conectam educação e agro sustentável.</p>
       </div>
-      <div class="accordion" id="policy-accordion">
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Crédito e financiamento</button>
-          <div class="drawer-content"><p><b>Serve para:</b> investir em estrutura, sementes, irrigação e equipamentos.</p><p><b>Resolve:</b> falta de capital inicial.</p><p><b>Exemplo:</b> crédito orientado para comprar irrigação sem comprometer toda a renda.</p></div>
+      <div class="filter-controls" role="group" aria-label="Filtrar ações">
+        <button class="filter-button active" type="button" data-filter="todas">Todas</button>
+        <button class="filter-button" type="button" data-filter="agua">Água</button>
+        <button class="filter-button" type="button" data-filter="solo">Solo</button>
+        <button class="filter-button" type="button" data-filter="residuos">Resíduos</button>
+      </div>
+      <div class="action-board" id="action-board" aria-live="polite">
+        <article class="action-note" data-category="agua">
+          <h3>Roteiro da nascente</h3>
+          <p>Mapear nascentes próximas e registrar riscos de lixo, pisoteio ou falta de vegetação.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Assistência técnica</button>
-          <div class="drawer-content"><p><b>Serve para:</b> orientar produção, solo, gestão e sustentabilidade.</p><p><b>Resolve:</b> decisões feitas sem informação técnica.</p><p><b>Exemplo:</b> técnico ajuda a reduzir pragas e melhorar produtividade.</p></div>
+        <article class="action-note" data-category="solo">
+          <h3>Canteiro protegido</h3>
+          <p>Comparar crescimento de plantas com cobertura seca, irrigação medida e registro semanal.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Compra pública de alimentos</button>
-          <div class="drawer-content"><p><b>Serve para:</b> conectar produtores a escolas e instituições.</p><p><b>Resolve:</b> dificuldade de venda e instabilidade de mercado.</p><p><b>Exemplo:</b> alimentos locais entram na merenda escolar.</p></div>
+        <article class="action-note" data-category="residuos">
+          <h3>Composteira escolar</h3>
+          <p>Transformar sobras orgânicas em adubo e calcular quanto lixo deixou de ser descartado.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Cooperativas e associações</button>
-          <div class="drawer-content"><p><b>Serve para:</b> vender, comprar e negociar em grupo.</p><p><b>Resolve:</b> isolamento e pouca força comercial.</p><p><b>Exemplo:</b> produtores organizam entrega coletiva para feira.</p></div>
+        <article class="action-note" data-category="agua">
+          <h3>Diário da irrigação</h3>
+          <p>Anotar horários, quantidade usada e sinais do solo antes de molhar a horta.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Capacitação e educação rural</button>
-          <div class="drawer-content"><p><b>Serve para:</b> desenvolver gestão, inovação e planejamento.</p><p><b>Resolve:</b> dificuldade de administrar custos e ampliar qualidade.</p><p><b>Exemplo:</b> curso de boas práticas para agroindústria familiar.</p></div>
+        <article class="action-note" data-category="solo">
+          <h3>Entrevista rural</h3>
+          <p>Ouvir produtores sobre rotação de culturas, análise de solo e proteção contra erosão.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Tecnologia e internet no campo</button>
-          <div class="drawer-content"><p><b>Serve para:</b> usar dados, aplicativos, previsão climática e venda digital.</p><p><b>Resolve:</b> isolamento informacional.</p><p><b>Exemplo:</b> controle de estoque e divulgação de produtos pelo celular.</p></div>
+        <article class="action-note" data-category="residuos">
+          <h3>Feira sem desperdício</h3>
+          <p>Planejar campanha para aproveitamento integral de alimentos e compra de produtores locais.</p>
         </article>
-        <article class="drawer">
-          <button type="button" aria-expanded="false">Agroecologia e sustentabilidade</button>
-          <div class="drawer-content"><p><b>Serve para:</b> conservar solo, água, sementes e biodiversidade.</p><p><b>Resolve:</b> desgaste ambiental e dependência de insumos caros.</p><p><b>Exemplo:</b> compostagem e rotação de culturas reduzem perdas.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="projeto" aria-labelledby="projeto-titulo">
+      <div class="section-header">
+        <p class="section-label">Projeto escolar</p>
+        <h2 id="projeto-titulo">Plano de apresentação para a comunidade</h2>
+      </div>
+      <div class="accordion" id="project-accordion">
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="acc-1" id="acc-btn-1">
+            1. Pesquisa local
+          </button>
+          <div class="accordion-panel" id="acc-1" role="region" aria-labelledby="acc-btn-1">
+            <p>Levantar um problema perto da escola e registrar evidências com fotos próprias, entrevistas e anotações.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="acc-2" id="acc-btn-2">
+            2. Protótipo de solução
+          </button>
+          <div class="accordion-panel" id="acc-2" role="region" aria-labelledby="acc-btn-2" hidden>
+            <p>Testar uma ação pequena, medir o resultado e explicar por que ela pode ajudar o ambiente escolhido.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="acc-3" id="acc-btn-3">
+            3. Socialização
+          </button>
+          <div class="accordion-panel" id="acc-3" role="region" aria-labelledby="acc-btn-3" hidden>
+            <p>Compartilhar o aprendizado em roda de conversa, feira escolar, site ou apresentação para famílias e produtores.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="domino section-pad" aria-labelledby="domino-title">
-      <div class="section-intro">
-        <p class="kicker">Efeito dominó</p>
-        <h2 id="domino-title">Quando o incentivo chega, o impacto se espalha.</h2>
+    <section class="section identity-section" id="sobre" aria-labelledby="dados-titulo">
+      <div class="section-header">
+        <p class="section-label">Dados editáveis</p>
+        <h2 id="dados-titulo">Identificação do projeto</h2>
       </div>
-      <ol class="impact-flow">
-        <li>Política pública</li>
-        <li>Produtor acessa apoio</li>
-        <li>Produção melhora</li>
-        <li>Renda aumenta</li>
-        <li>Alimento chega à comunidade</li>
-        <li>Economia local se fortalece</li>
-        <li>Futuro no campo se torna possível</li>
-      </ol>
-    </section>
-
-    <section class="human-link section-pad" aria-labelledby="human-title">
-      <div class="human-copy">
-        <p class="kicker">Campo, escola e cidade</p>
-        <h2 id="human-title">O alimento não nasce no mercado.</h2>
-        <p>A cidade muitas vezes consome sem enxergar quem produz. Aproximar escola, campo e comunidade ajuda a valorizar o trabalho rural, reduzir desperdícios e entender que políticas públicas também são ferramentas de justiça social.</p>
-      </div>
-      <div class="three-columns">
-        <section aria-label="Escola"><h3>Escola</h3><ul><li>pesquisa a origem dos alimentos</li><li>cria hortas</li><li>visita feiras</li><li>debate consumo consciente</li></ul></section>
-        <section aria-label="Campo"><h3>Campo</h3><ul><li>produz</li><li>preserva saberes</li><li>gera renda</li><li>abastece comunidades</li></ul></section>
-        <section aria-label="Cidade"><h3>Cidade</h3><ul><li>consome</li><li>compra</li><li>desperdiça ou valoriza</li><li>decide apoiar produtores locais</li></ul></section>
-      </div>
-    </section>
-
-    <section class="decision-lab section-pad" id="decisoes" aria-labelledby="decision-title">
-      <div class="section-intro">
-        <p class="kicker">Simulação curta</p>
-        <h2 id="decision-title">Você decide: qual apoio muda mais essa realidade?</h2>
-      </div>
-      <form class="decision-form" id="decision-form">
-        <div id="decision-questions"></div>
-        <button class="action primary" type="submit">Analisar decisões</button>
-        <div class="decision-result" id="decision-result" aria-live="polite"></div>
-      </form>
-    </section>
-
-    <section class="manifesto section-pad">
-      <p class="kicker">Manifesto final</p>
-      <h2>Incentivar a agricultura familiar é escolher que futuro queremos alimentar.</h2>
-      <p>Quando uma política pública chega ao agricultor familiar, ela não beneficia apenas uma propriedade. Ela fortalece a feira, a escola, a alimentação, a cultura local, a economia regional e a permanência das famílias no campo.</p>
-      <a class="action ghost" href="#painel">Voltar ao painel</a>
+      <article class="identity-card">
+        <p><strong>Nome:</strong> [SEU NOME AQUI]</p>
+        <p><strong>Turma:</strong> [SUA TURMA AQUI]</p>
+        <p><strong>Escola:</strong> [NOME DA ESCOLA AQUI]</p>
+        <p><strong>Professor(a):</strong> [NOME DO PROFESSOR AQUI]</p>
+      </article>
     </section>
   </main>
 
-  <footer class="project-file">
-    <div class="file-top">
-      <span>Ficha do Projeto</span>
-      <strong>Painel informativo</strong>
-    </div>
-    <dl>
-      <div><dt>Tema</dt><dd>Políticas de incentivo à agricultura familiar</dd></div>
-      <div><dt>Nome</dt><dd>Giovanna Araujo Mello</dd></div>
-      <div><dt>Turma</dt><dd>3º Ano E</dd></div>
-      <div><dt>Escola</dt><dd>Colégio Estadual Padre Cláudio Morelli</dd></div>
-      <div><dt>Professor(a)</dt><dd>Rafael dos Santos Biano</dd></div>
-      <div><dt>Tecnologias</dt><dd>HTML, CSS e JavaScript</dd></div>
-      <div><dt>Ano</dt><dd>2026</dd></div>
-    </dl>
-    <p>© 2026 — Todos os direitos reservados.</p>
-    <a class="resource-link" href="assets/ficha-tecnica.txt">Abrir ficha técnica do projeto</a>
-  </footer>
+  <aside class="accessibility-panel" aria-label="Painel de acessibilidade">
+    <button class="accessibility-button" type="button" id="contrast-toggle" aria-pressed="false">Alto contraste</button>
+    <button class="accessibility-button" type="button" id="font-increase">A+</button>
+    <button class="accessibility-button" type="button" id="font-decrease">A-</button>
+    <button class="accessibility-button" type="button" id="top-button">Topo</button>
+  </aside>
 
-  <button class="top-button" id="top-button" type="button" aria-label="Voltar ao topo">Topo</button>
-  <script src="script.js" defer></script>
+  <footer class="site-footer" id="rodape">
+    <div class="footer-content">
+      <div>
+        <h2>Educação que Cultiva o Futuro</h2>
+        <p>Projeto autoral para o Concurso Agrinho Programação 2026.</p>
+        <p>© 2026 — Todos os direitos reservados.</p>
+      </div>
+      <address class="footer-details">
+        <p><strong>Nome:</strong> [SEU NOME AQUI]</p>
+        <p><strong>Turma:</strong> [SUA TURMA AQUI]</p>
+        <p><strong>Escola:</strong> [NOME DA ESCOLA AQUI]</p>
+        <p><strong>Professor(a):</strong> [NOME DO PROFESSOR AQUI]</p>
+      </address>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#acoes">Ações</a>
+        <a href="#projeto">Projeto</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

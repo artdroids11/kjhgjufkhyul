@@ -1,36 +1,34 @@
-# Raízes que Sustentam
+# Educação que Cultiva o Futuro
 
 ## Tema
-Políticas de incentivo à agricultura familiar.
+Papel da educação no futuro sustentável do agro.
 
 ## Objetivo
-Explicar como políticas públicas e ações de incentivo podem fortalecer a agricultura familiar, melhorar a renda no campo, ampliar o acesso a mercados e promover sustentabilidade.
+Mostrar como a escola pode transformar problemas do agro em investigação, aprendizagem prática e ações sustentáveis para a comunidade.
 
-## Conceito
-O projeto foi desenvolvido como um **Painel de Caminhos para o Agricultor Familiar**. A navegação funciona como uma jornada interativa: o visitante entende quem produz, observa os obstáculos, monta um caso no painel, consulta políticas públicas e simula decisões.
+## Descrição
+O site apresenta uma experiência educativa sobre água, solo, resíduos, energia e participação social. Ele foi criado para o Concurso Agrinho Programação 2026 com foco em conteúdo autoral, acessibilidade, responsividade e interatividade feita apenas com HTML5, CSS3 e JavaScript puro.
 
 ## Funcionalidades
-- Painel de Caminhos de Apoio;
-- acordeão de políticas públicas;
-- simulação de decisões públicas;
-- recurso de acessibilidade com alto contraste e modo leitura;
-- barra de progresso de leitura;
+- ferramenta principal interativa de diagnóstico sustentável;
+- formulário com `select`, `input`, `label` e resultado personalizado;
+- menu mobile com abertura e fechamento por JavaScript;
+- abas no laboratório da escola;
+- filtro de ações por prioridade;
+- acordeão do projeto escolar;
+- painel de acessibilidade com alto contraste e ajuste de fonte;
 - botão de voltar ao topo;
-- efeitos suaves de revelação ao rolar a página;
-- layout responsivo;
-- navegação por seções;
-- menu mobile funcional.
+- layout responsivo para computador, tablet e celular;
+- navegação por seções existentes.
 
 ## Tecnologias utilizadas
-- HTML5;
-- CSS3;
-- JavaScript puro.
-
-O projeto não utiliza bibliotecas, frameworks, Bootstrap, Tailwind, React, Vue, jQuery, fontes externas ou dependências da internet.
+- HTML5
+- CSS3
+- JavaScript puro
 
 ## Como executar
 1. Baixe ou clone o repositório.
-2. Abra o arquivo `index.html` diretamente no navegador.
+2. Abra o arquivo `index.html` no navegador.
 
 ## Estrutura de arquivos
 ```text
@@ -40,25 +38,26 @@ O projeto não utiliza bibliotecas, frameworks, Bootstrap, Tailwind, React, Vue,
 ├── script.js
 ├── README.md
 ├── assets/
-│   └── ficha-tecnica.txt
 └── img/
-    └── painel-caminhos.svg
 ```
 
-## Acessibilidade
-O site possui estrutura semântica com `header`, `nav`, `main`, `section`, `article` e `footer`. Também inclui link para pular ao conteúdo principal, campos com `label`, botões grandes, foco visível, contraste adequado, `aria-live` nas áreas de resultado, `aria-expanded` nos acordeões e controles de alto contraste e modo leitura.
-
 ## Responsividade
-O layout usa Flexbox, Grid e Media Queries para se adaptar a computador, tablet e celular. No celular, o menu vira hambúrguer, a trilha de obstáculos se reorganiza, o fluxo de impacto fica vertical e o painel continua usável.
+O site se adapta para computador, tablet e celular usando Media Queries. O menu se transforma em menu mobile em telas menores, os blocos passam para uma coluna quando necessário e os botões ficam confortáveis para toque.
 
-## Autoria de mídias
-As ilustrações, linhas de conexão, mapa visual, marcadores e elementos gráficos foram criados e customizados no próprio projeto com HTML, CSS e SVG autoral. A imagem `img/painel-caminhos.svg` é usada na abertura do site, e o arquivo `assets/ficha-tecnica.txt` funciona como ficha técnica complementar acessível pelo rodapé.
+## Acessibilidade
+O projeto usa HTML semântico, links de navegação, foco visível, botões grandes, `aria-label`, `aria-live`, `aria-expanded`, `aria-selected`, labels ligados aos campos de formulário e painel de acessibilidade com alto contraste e controle de fonte.
+
+## Autoria e mídias
+Os textos são autorais e foram reescritos para o tema do projeto. A parte visual foi criada com HTML e CSS próprios, sem imagens externas. Caso sejam adicionadas imagens futuramente, elas devem ficar em `img/`, com nomes organizados e textos alternativos. Ferramentas sugeridas para criação ou customização: Canva, Paint, Piskel ou editor próprio.
 
 ## Dados do projeto
-- Nome: Giovanna Araujo Mello
-- Turma: 3º Ano E
-- Escola: Colégio Estadual Padre Cláudio Morelli
-- Professor(a): Rafael dos Santos Biano
+Nome: [SEU NOME AQUI]  
+Turma: [SUA TURMA AQUI]  
+Escola: [NOME DA ESCOLA AQUI]  
+Professor(a): [NOME DO PROFESSOR AQUI]
+
+## Link do projeto
+GitHub Pages ou Vercel: [COLE O LINK AQUI]
 
 ## Copyright
 © 2026 — Todos os direitos reservados.
